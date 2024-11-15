@@ -5,9 +5,9 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 const Shorten = () => {
-    const [url, seturl] = useState('')
-    const [shorturl, setshorturl] = useState('')
-    const [mylink, setmylink] = useState('')
+    const [url, setUrl] = useState('')
+    const [shorturl, setShorturl] = useState('')
+    const [mylink, setMylink] = useState('')
 
     const generate = () => {
 
@@ -32,9 +32,9 @@ const Shorten = () => {
         fetch("/api/generate", requestOptions)
             .then((response) => response.json())
             .then((result) => {
-                seturl("")
-                setshorturl("")
-                setmylink(shorturl)
+                setUrl("")
+                setShorturl("")
+                setMylink(shorturl)
                 alert(result.message)
                 console.log(result)
             })
@@ -46,9 +46,9 @@ const Shorten = () => {
         
             <div className="form w-[30vw] h-[40vh] border-2 border-gray-400 bg-purple-200 my-20 rounded-lg px-5 py-5 m-auto">
                 <h1 className='font-bold text-xl mb-4'>Generate your short URLs</h1>
-                <input className='border-2 border-gray-400 rounded-md px-2 w-full my-1 py-1' type="text" placeholder='Enter URL' value={url} onChange={e => { seturl(e.target.value) }} />
+                <input className='border-2 border-gray-400 rounded-md px-2 w-full my-1 py-1' type="text" placeholder='Enter URL' value={url} onChange={e => { setUrl(e.target.value) }} />
 
-                <input className='border-2 border-gray-400 rounded-md px-2 w-full my-1 py-1' type="text" placeholder='Enter your preferred short URL' value={shorturl} onChange={e => { setshorturl(e.target.value) }} />
+                <input className='border-2 border-gray-400 rounded-md px-2 w-full my-1 py-1' type="text" placeholder='Enter your preferred short URL' value={shorturl} onChange={e => { setShorturl(e.target.value) }} />
 
                 <button onClick={generate} disabled={!url || !shorturl} className='bg-purple-600 disabled:bg-purple-400  py-3  rounded-lg text-white w-full font-bold mt-5 '>Generate</button>
 
