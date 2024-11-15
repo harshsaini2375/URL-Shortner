@@ -6,12 +6,14 @@ const Navbar = () => {
     return (
         
             <nav className='flex justify-between px-5 py-5 bg-purple-400 text-white' >
-                <Link href="/"><div className='font-bold text-xl'>Blinkit</div></Link>
-                <ul className='flex gap-5 '>
+                <div className="logo flex gap-2  items-center">
+                    <Image src={"/bitly.svg"} alt='logo' height={35} width={35}/>
+                <Link href="/"><div className='font-bold text-2xl'>Blinkit</div></Link>
+                </div>
+                <ul className='flex gap-5 text-xl'>
                     <Link href="/"><li>Home</li></Link>
                     <Link href="/shorten"><li>Try now</li></Link>
                     <Link href="/about"><li>About</li></Link>
-                    <Link href="/contact"><li>Contact</li></Link>
                 </ul>
             </nav>
         
