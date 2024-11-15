@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Navbar = () => {
     return (
-        <>
+        
             <nav className='flex justify-between px-5 py-5 bg-purple-400 text-white' >
                 <Link href="/"><div className='font-bold text-xl'>Blinkit</div></Link>
                 <ul className='flex gap-5 '>
@@ -14,7 +14,7 @@ const Navbar = () => {
                     <Link href="/contact"><li>Contact</li></Link>
                 </ul>
             </nav>
-        </>
+        
     )
 }
 

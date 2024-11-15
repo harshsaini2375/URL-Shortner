@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 export default function Home() {
   return (
-   <>
+   
    <div className="main flex w-[99vw] h-[50vh] rounded-lg py-10 mx-2 my-10 bg-purple-100">
     <div className="left w-1/2 h-full flex flex-col justify-center items-center">
     <p className="font-bold text-3xl">Shorten your URL here.</p>
@@ -16,6 +16,6 @@ export default function Home() {
     <Image src={"/webdev.gif"} alt="mainimage" height={100} width={500} />
     </div>
    </div>
-   </>
+   
   );
 }

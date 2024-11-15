@@ -43,7 +43,7 @@ const Shorten = () => {
     }
 
     return (
-        <>
+        
             <div className="form w-[30vw] h-[40vh] border-2 border-gray-400 bg-purple-200 my-20 rounded-lg px-5 py-5 m-auto">
                 <h1 className='font-bold text-xl mb-4'>Generate your short URLs</h1>
                 <input className='border-2 border-gray-400 rounded-md px-2 w-full my-1 py-1' type="text" placeholder='Enter URL' value={url} onChange={e => { seturl(e.target.value) }} />
@@ -58,7 +58,7 @@ const Shorten = () => {
                     <Link className='text-blue-700' target='_blank' href={`/${mylink}`}>{`${process.env.NEXT_PUBLIC_HOST}${mylink}`}</Link>
                 </div>}
             </div>
-        </>
+        
     )
 }
 
