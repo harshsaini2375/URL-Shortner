@@ -3,8 +3,7 @@ import clientPromise from "@/lib/mongodb";
 
 export async function POST(request) {
 
-    const body = await request.json()
-    
+    const body = await request.json()  
     
     // establishing connections
     const client = await clientPromise;

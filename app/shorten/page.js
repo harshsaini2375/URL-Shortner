@@ -27,14 +27,14 @@ const Shorten = () => {
             body: raw,
             redirect: "follow"
         };
-
+        console.log('result')
         // here we are fetching the data
         fetch("/api/generate", requestOptions)
             .then((response) => response.json())
             .then((result) => {
+                setMylink(shorturl)              
                 setUrl("")
                 setShorturl("")
-                setMylink(shorturl)
                 alert(result.message)
                 console.log(result)
             })
@@ -52,8 +52,7 @@ const Shorten = () => {
 
                 <button onClick={generate} disabled={!url || !shorturl} className='bg-purple-600 disabled:bg-purple-400  py-3 cursor-pointer rounded-lg text-white w-[26vw] font-bold mt-5 hover:w-full  hover:border-purple-900 hover:border-[2px] hover:py-4 transition-all ease-in-out duration-100  '>Generate</button>
 
-
-                {mylink && <div className='flex absolute bottom-3' >
+             {mylink && <div className='flex absolute bottom-3' >
                     <h1 className='font-bold pr-3'>Your link</h1>
                     <Link className='text-blue-700 ' target='_blank' href={`/${mylink}`}>{`${process.env.NEXT_PUBLIC_HOST}${mylink}`}</Link>
                 </div>}
