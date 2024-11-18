@@ -43,7 +43,7 @@ const Shorten = () => {
 
     return (
         
-            <div className="form w-[80vw] md:w-[30vw] h-[40vh] border-2 border-gray-400 bg-purple-200 my-20 rounded-lg px-5 py-5 m-auto flex flex-col relative items-center">
+            <div className="form w-[80vw] md:w-[30vw] h-[55vh] md:h-[40vh] border-2 border-gray-400 bg-purple-200 my-20 rounded-lg px-5 py-5 m-auto flex flex-col relative items-center">
                 <h1 className='font-extrabold text-2xl text-purple-800 mb-4'>Generate Your Short URLs</h1>
                 <input className='border-2 border-gray-400 rounded-md px-2 w-full md:w-[26vw] my-1 py-1 hover:w-full hover:py-2 hover:border-[3px]  hover:border-purple-900 transition-all ease-in-out duration-100 ' type="text" placeholder='Enter URL' value={url} onChange={e => { setUrl(e.target.value) }} />
 

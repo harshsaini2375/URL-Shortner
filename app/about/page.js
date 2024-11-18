@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
     return (
-        <div className='border-2 border-gray-500 rounded-xl w-[80vw] m-auto h-[80vh] px-5 py-10 mt-5 overflow-y-scroll overflow-x-hidden'>
+        <div className='border-2 border-gray-500 rounded-xl w-[80vw] m-auto h-[70vh] md:h-[80vh] px-5 py-10 mt-5 overflow-y-scroll overflow-x-hidden'>
             <h1 className='text-3xl font-extrabold text-center'>About</h1>
             <h2 className='text-2xl font-bold mt-5 mb-1'>About Our URL Shortener</h2>
             <p className='text-xl'>Welcome to our URL shortener service. We are passionate about making long, unwieldy links more manageable. Whether you are sharing a link on social media, in an email, or just want to tidy up your URLs, we got you covered.</p>
