@@ -10,7 +10,7 @@ const Navbar = () => {
                     <Image src={"/bitly.svg"} alt='logo' height={35} width={35}/>
                 <Link href="/"><div className='font-bold text-2xl'>Blinkit</div></Link>
                 </div>
-                <ul className='flex gap-5 text-xl'>
+                <ul className='flex gap-3 justify-center items-center md:gap-5 text-base md:text-xl'>
                     <Link href="/"><li>Home</li></Link>
                     <Link href="/shorten"><li>Try now</li></Link>
                     <Link href="/about"><li>About</li></Link>

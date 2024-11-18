@@ -2,14 +2,14 @@ import clientPromise from "@/lib/mongodb";
 
 
 export async function POST(request) {
-
-    const body = await request.json()  
     
     // establishing connections
     const client = await clientPromise;
     const db = client.db("blinkit")
     const collection = db.collection("url")
-
+    
+    const body = await request.json()  
+    
     // checking if shorturl aiready exists
     const exist = await collection.findOne({shorturl:body.shorturl})
     
